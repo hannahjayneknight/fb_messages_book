@@ -2185,9 +2185,83 @@
             margin-bottom: 20px
         }
     </style>
-    <title>Sheila Hamilton</title>
+    <title>Louise Pierret</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+
+            "use strict";
+
+            if (window.console) {
+                console.log('foo');
+            }
+
+            // background
+            $("._5vb_").css("background-color", "#ffffff");
+            // font
+            $("._2let").css({
+                "font-family": "'Segoe UI Historic', 'Segoe UI', Helvetica, Arial, sans-serif",
+                "font-size": "16px",
+                "max-width": "564px"
+            });
+            // text size
+            $("._3a_u").css("width", "100%");
+            // reversing texts
+            $("._4t5n").css({
+                "display": "flex",
+                "flex-direction": "column-reverse"
+            });
 
 
+            // finding the people involved in the chat
+            // names is an array with these people
+            var all_names = [];
+            $("._2pio").each(function (i, obj) {
+                all_names.push($(obj).text());
+            });
+            var names = all_names.filter((item, i, ar) => ar.indexOf(item) === i);
+
+
+            var messages = $("._2let");
+            messages.css({
+                "border-radius": "20px",
+                "padding": "10px 15px"
+            });
+
+
+            $("._2lel").each(function (i, obj) {
+                // NB: $( obj )[0].textContent ) == name of the sender
+
+                var parent = $(obj).parent();
+                var message_content = jQuery("._2let", parent);
+
+                // hide name
+                $(obj).hide();
+
+                if ($(obj)[0].textContent === names[0]) { // Gabe
+
+                    message_content.css({
+                        "background-color": "#E4E6EB"
+                        // "font-family": "'Segoe UI Historic', 'Segoe UI', Helvetica, Arial, sans-serif"
+                    });
+
+                } else { // me
+
+                    message_content.css({
+                        "background-color": "#3B77BB",
+                        "color": "#FFFFFF"
+                        // "font-family": "'Segoe UI Historic', 'Segoe UI', Helvetica, Arial, sans-serif"
+                    });
+
+                    parent.css({
+                        "display": "flex",
+                        "justify-content": "flex-end"
+                    });
+                }
+            });
+        });
+    </script>
 </head>
 
 <body class="_5vb_ _2yq _4yic">
@@ -2237,57 +2311,320 @@
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjBQkTGS0pU+syAAAA7UlEQVQoz32RsUoDURBFDxJDLJNFK0VJk85OQbSxyhekSBHIFwTS+Q3+gX6DFkGbdFpmCzF2axNSiI2ikoAKwrHYfSto1jPFPN5cmHsZJKsDT02cOzfxxP3wn7aaA38zsBYEkfcuIjFKBUOLGAo2/Y/mEh0CEvOZvV84AqCDk1zdFhuO1dhNe6pO8CN3nSaq2LLshjNV3/FJ1Znrlm1ZyWQh9jOOVO25ZayObYjtfO2oxAW7wAo3VIFtbrljJzd+iWu+FoZ8cxWxWyjohlscLxh+2f851uGf8ZV7aZ4SAFMeOeeMiDrLPHDNNLj8BpDDbHwVTUxTAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE5LTA1LTEwVDAyOjI1OjQ1LTA3OjAwLttmwQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOS0wNS0xMFQwMjoyNTo0NS0wNzowMF+G3n0AAAAASUVORK5CYII=" />
                         </div>
                         <div class="_3b0c">
-                            <div class="_3b0d">Sheila Hamilton</div>
+                            <div class="_3b0d">Louise Pierret</div>
                         </div>
                     </div>
                     <div class="_4t5n" role="main">
                         <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
-                            <div class="_3-96 _2pio _2lek _2lel">Sheila Hamilton</div>
+                            <div class="_3-96 _2pio _2lek _2lel">Hannah Knight</div>
                             <div class="_3-96 _2let">
                                 <div>
                                     <div></div>
-                                    <div>Ok no worries</div>
+                                    <div>Uhuh!</div>
                                     <div></div>
                                     <div></div>
                                 </div>
                             </div>
-                            <div class="_3-94 _2lem">7 Apr 2021, 20:22</div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 22:04</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Louise Pierret</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>Yes 🥰 i’ll send you a picture whenever i make it</div>
+                                    <div></div>
+                                    <div></div>
+                                    <div>
+                                        <ul class="_tqp">
+                                            <li>❤Hannah Knight</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 22:01</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Louise Pierret</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>That’s when you know you did something right!</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 22:00</div>
                         </div>
                         <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
                             <div class="_3-96 _2pio _2lek _2lel">Hannah Knight</div>
                             <div class="_3-96 _2let">
                                 <div>
                                     <div></div>
-                                    <div>Ohh OK that makes sense thank you!</div>
+                                    <div>Sowry 🥺 next time I will take a pic b4 it is cut ;)</div>
                                     <div></div>
                                     <div></div>
                                 </div>
                             </div>
-                            <div class="_3-94 _2lem">7 Apr 2021, 20:07</div>
-                        </div>
-                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
-                            <div class="_3-96 _2pio _2lek _2lel">Sheila Hamilton</div>
-                            <div class="_3-96 _2let">
-                                <div>
-                                    <div></div>
-                                    <div>Hi Hannah it&#039;s not short 4 anything her name was Hettie</div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                            <div class="_3-94 _2lem">7 Apr 2021, 19:59</div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 21:56</div>
                         </div>
                         <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
                             <div class="_3-96 _2pio _2lek _2lel">Hannah Knight</div>
                             <div class="_3-96 _2let">
                                 <div>
                                     <div></div>
-                                    <div>Hiya, what is my g grandma&#039;s name Hettie short for?</div>
+                                    <div>Oh yeah! She took 4 fat slices home with her 😆</div>
                                     <div></div>
                                     <div></div>
                                 </div>
                             </div>
-                            <div class="_3-94 _2lem">7 Apr 2021, 19:43</div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 21:55</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Louise Pierret</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>Noooo, I love details on cake 😭 did your neighbor enjoy it?</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 21:53</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Louise Pierret</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>Thank you!</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 21:52</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Hannah Knight</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>You also missed the pretty apple flower I had on top before cutting 🥺</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 21:44</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Hannah Knight</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div><a
+                                            href="https://www.theguardian.com/food/2021/jan/09/meera-sodhas-vegan-recipe-for-apple-pudding-cake">https://www.theguardian.com/food/2021/jan/09/meera-sodhas-vegan-recipe-for-apple-pudding-cake</a>
+                                    </div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 21:44</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Hannah Knight</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>Of course!</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 21:44</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Hannah Knight</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>Ahhh I see</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 21:44</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Louise Pierret</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>I&#039;m very curious, if you have the recipe I would love to try it !</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 21:43</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Louise Pierret</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>Well it was weird to imagine, we do mostly use apples in pies, not so much in
+                                        cake 🤔</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 21:42</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Hannah Knight</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>What were you thinking of? 😅 like a tart tatin?</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 21:41</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Louise Pierret</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>It adds to the homemade charm hehe, it looks lovely tho, not what i had in mind
+                                        when you said apple cake 😯</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 20:53</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Hannah Knight</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>But tastes amazing! (If I do say so myself hehe)</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 19:59</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Hannah Knight</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>I accidentally overdid it a bit so the top is a bit tooooo dark 🙈</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 19:59</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Hannah Knight</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div>
+                                        <div><a
+                                                href="messages/inbox/louisepierret_lzsbg8bc2q/photos/177883465_465666784543995_3817316107279702694_n_465666781210662.jpg"><img
+                                                    src="messages/inbox/louisepierret_lzsbg8bc2q/photos/177883465_465666784543995_3817316107279702694_n_465666781210662.jpg"
+                                                    class="_2yuc _3-96" /></a></div>
+                                    </div>
+                                    <div>
+                                        <ul class="_tqp">
+                                            <li>❤Louise Pierret</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 19:58</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Louise Pierret</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>Ooooh do tell me how that apple cake was</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 18:21</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Hannah Knight</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>I will 😊😊 already bought the stuff for apple cake so that&#039;s on the menu
+                                        today 😋</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 15:59</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Louise Pierret</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>let me know if you make them 😊😊</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 15:58</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Louise Pierret</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>you&#039;re welcooome</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 15:58</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Hannah Knight</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div>Thank youuu xx</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 15:58</div>
+                        </div>
+                        <div class="pam _3-95 _2pi0 _2lej uiBoxWhite noborder">
+                            <div class="_3-96 _2pio _2lek _2lel">Louise Pierret</div>
+                            <div class="_3-96 _2let">
+                                <div>
+                                    <div></div>
+                                    <div><a
+                                            href="https://thegingeredwhisk.com/twice-baked-honey-cakes/">https://thegingeredwhisk.com/twice-baked-honey-cakes/</a>
+                                    </div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="_3-94 _2lem">24 Apr 2021, 15:58</div>
                         </div>
                     </div>
                 </div>
@@ -2299,9 +2636,6 @@
             </div>
         </div>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="OneDrive - Imperial College London\Desktop\fb_messages_book\js\scripts.js"></script>
 </body>
 
 </html>
