@@ -2193,10 +2193,6 @@
 
             "use strict";
 
-            if (window.console) {
-                console.log('foo');
-            }
-
             // background
             $("._5vb_").css("background-color", "#ffffff");
             // font
@@ -2212,6 +2208,9 @@
                 "display": "flex",
                 "flex-direction": "column-reverse"
             });
+            // hide banners and headers
+            $("#bluebarRoot").hide();
+            $("._3b0b").hide();
 
 
             // finding the people involved in the chat
@@ -2235,6 +2234,7 @@
 
                 var parent = $(obj).parent();
                 var message_content = jQuery("._2let", parent);
+                var reaction = $("._tqp");
 
                 // hide name
                 $(obj).hide();
@@ -2243,22 +2243,39 @@
 
                     message_content.css({
                         "background-color": "#E4E6EB"
-                        // "font-family": "'Segoe UI Historic', 'Segoe UI', Helvetica, Arial, sans-serif"
+                    });
+
+                    reaction.css({
+                        "padding": "2.5px"
                     });
 
                 } else { // me
 
                     message_content.css({
-                        "background-color": "#3B77BB",
+                        "background-color": "#1877F2",
                         "color": "#FFFFFF"
-                        // "font-family": "'Segoe UI Historic', 'Segoe UI', Helvetica, Arial, sans-serif"
+                    });
+
+                    reaction.css({
+                        "color": "#FFFFFF",
+                        "padding": "2.5px"
                     });
 
                     parent.css({
                         "display": "flex",
-                        "justify-content": "flex-end"
+                        "justify-content": "flex-end",
+                        "flex-wrap": "wrap"
                     });
                 }
+            });
+
+            // dates and times of texts
+            var dateTime = $("._2lem");
+            dateTime.css({
+                "font-family": "'Segoe UI Historic', 'Segoe UI', Helvetica, Arial, sans-serif",
+                "font-size": ".6875rem",
+                "color": "#8A8D91",
+                "display": "block"
             });
         });
     </script>
