@@ -2211,6 +2211,11 @@
             // hide banners and headers
             $("#bluebarRoot").hide();
             $("._3b0b").hide();
+            // moving date and time to a newline
+            $( "<div class='break'></div>" ).insertAfter( "._2let" );
+            $(".break").css({
+                "flex-basis": "100%"
+            });
 
 
             // finding the people involved in the chat
@@ -2231,34 +2236,50 @@
 
             $("._2lel").each(function (i, obj) {
                 // NB: $( obj )[0].textContent ) == name of the sender
+                // $( obj ) == name before each text
 
-                var parent = $(obj).parent();
-                var message_content = jQuery("._2let", parent);
+                var parent = $(obj).parent(); // uiBoxWhite div
+                var message_content = jQuery("._2let", parent); // finding .2let div within uiBoxWhite div
                 var reaction = $("._tqp");
 
+                
                 // hide name
                 $(obj).hide();
 
-                if ($(obj)[0].textContent === names[0]) { // Gabe
+                if ($(obj)[0].textContent === names[0]) { // sender
 
                     message_content.css({
                         "background-color": "#E4E6EB"
                     });
 
                     reaction.css({
-                        "padding": "2.5px"
+                        "padding": "2.5px",
+                        //"justify-content": "flex-end",
+                        //"border-radius": "33%",
+                        //"display": "flex",
+                        //"transform": "translate(0%, 75%)"
                     });
 
                 } else { // me
+
+                    //console.log(reaction.html);
 
                     message_content.css({
                         "background-color": "#1877F2",
                         "color": "#FFFFFF"
                     });
 
+                    jQuery("a", parent).css({
+                        "color": "#FFFFFF"
+                    });
+
+
                     reaction.css({
+                        "padding": "2.5px",
                         "color": "#FFFFFF",
-                        "padding": "2.5px"
+                        //"border-radius": "33%",
+                        //"display": "flex",
+                        //"transform": "translate(0%, 75%)"
                     });
 
                     parent.css({
@@ -2354,7 +2375,8 @@
                                     <div></div>
                                     <div>
                                         <ul class="_tqp">
-                                            <li>❤Hannah Knight</li>
+                                            <li>👍Hannah Knight</li>
+                                            <img hidden height="24" width="24" alt="❤️" referrerpolicy="origin-when-cross-origin" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ted/2/16/2764.png">
                                         </ul>
                                     </div>
                                 </div>
@@ -2561,7 +2583,8 @@
                                     </div>
                                     <div>
                                         <ul class="_tqp">
-                                            <li>❤Louise Pierret</li>
+                                            <img hidden height="24" width="24" alt="❤️" referrerpolicy="origin-when-cross-origin" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ted/2/16/2764.png">
+                                            <li>❤️Louise Pierret</li>
                                         </ul>
                                     </div>
                                 </div>
